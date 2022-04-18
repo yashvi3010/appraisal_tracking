@@ -1,0 +1,32 @@
+{% extends 'projectmodule/base3.html' %}
+{% block container %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Project Module Details {{ book.id }}</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    Project Module Name
+                </dt>
+                <dd class="col-sm-9">
+                    {{ projectmodule.name }}
+                </dd>
+                <dt class="col-sm-3">
+                    Project Module Description
+                </dt>
+                <dd class="col-sm-9">
+                    {{ projectmodule.description }}
+                </dd>
+            
+                <dt class="col-sm-7">
+                
+                    Project Module EstimatedHours
+                </dt>
+                <dd>
+                    {{ projectmodule.estimatedHours }}
+                </dd>
+            </dl>
+        </div>
+    </div>
+{% endblock %}

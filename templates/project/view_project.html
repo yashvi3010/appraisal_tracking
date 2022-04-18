@@ -1,0 +1,50 @@
+{% extends "project/base1.html" %}
+
+{% block container %}
+
+<table class="table">
+    <tr>
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Technology</th>
+                <th scope="col">EstimatedHours</th>
+                <th scope="col">StartDate</th>
+                <th scope="col">CompletionDate</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Update</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                {% comment %} <td><a href="{% url 'detail_serviceprovider' serviceprovider.pk%}">{{
+                        serviceprovider.id}}</a></td> {% endcomment %}
+                <td><a href="{% url 'detail_project' project.pk %}">{{project.id}}</a></td>
+                <td>{{project.title}}</td>
+                <td>{{project.description}}</td>
+                <td>{{project.technology}}</td>
+                <td>{{project.estimatedHours}}</td>
+                <td>{{project.startDate}}</td>
+                <td>{{project.completionDate}}</td>
+                <td>
+
+                    <a class="btn btn-danger" href="{% url 'delete_project' project.pk %}">Delete</a>
+
+                    {% comment %} <a href="{% url 'exam_update' exam.pk%}">Update</a>
+                    <a href="{% url 'exam_delete' exam.pk%}">DELETE</a> {% endcomment %}
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="{% url 'update_project' project.pk %}">Update</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+
+{% endblock %}

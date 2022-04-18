@@ -1,0 +1,27 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'attend/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'attend/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'attend/css/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'attend/css/style.css' %}">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    {% block content%}  {% endblock content %}
+
+    {% block js %}
+    <script src="{% static 'attend/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'attend/js/popper.min.js' %}"></script>
+    <script src="{% static 'attend/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'attend/js/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'attend/js/select2.min.js' %}"></script>
+    <script src="{% static 'attend/js/app.js' %}"></script>
+    {% endblock js %}
+</body>
